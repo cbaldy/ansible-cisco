@@ -1,5 +1,5 @@
----
-- name: Cisco Show Interfaces
-  hosts: all
+- name: run multiple commands on remote nodes
   cisco.ios.ios_command:
-    commands: show interfaces
+    commands:
+    - show version
+    - show interfaces
