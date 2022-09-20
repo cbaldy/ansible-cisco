@@ -1,8 +1,15 @@
 ---
-- hosts: all
-  gather_facts: no
+
+- name: Cisco show ip int bri example
+  hosts: all
+  gather_facts: false
+
   tasks:
-   - name: show ip int bri
-     cisco.ios.ios_command:
-       commands:
-         - show ip interface brief
+    - name: run show ip int bri on the routers
+      ios_command:
+        commands: show ip int bri
+      register: output
+
+    - name: print output
+      debug:
+        var: output.stdout_lines
