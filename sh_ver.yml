@@ -1,6 +1,8 @@
-- name: DATEC test commands
-  hosts: all
-  cisco.iosxr.iosxr_command:
-    commands:
-    - show version
-    - show interfaces
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+   - name: show ver
+     cisco.ios.ios_command:
+       commands:
+         - show version
