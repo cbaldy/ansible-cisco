@@ -1,7 +1,30 @@
-name: Configure the login banner using delimiter
-  cisco.ios.ios_banner:
-    banner: login
-    multiline_delimiter: x
-    text: this is my login banner
-    state: present
+---
 
+- name: Cisco Banner Changer
+  hosts: all
+  gather_facts: false
+
+  tasks:
+  - name: Configure the login banner using delimiter
+    cisco.ios.ios_banner:
+      banner: motd
+      multiline_delimiter: #
+      text: 
+        DDDDDDD                tt
+        DD    DD           tttttttttt                          <XXXX>-------
+        DD     DD    aaaa      tt      eeeee      ccccc        XXXXXX-------
+        DD     DD        a     tt     e     e    c     c      <XXXXXX>------
+        DD     DD   aaaa a     tt     eeeeeee    c            XXXXXXXX------
+        DD    DD   a    aa     tt     e          c     c     <XXXXXXXX>-----
+        DDDDDDD     aaaa a     tt      eeeee      ccccc      XXXXXXXXXX-----
+                     SASKATCHEWAN  TELECOMMUNICATIONS  NETWORK
+        
+        
+                 >>>>  Access to this system is restricted to  <<<<
+                 >>>>  authorized personnel only.  If you are  <<<<
+                 >>>>  not authorized, EXIT NOW !!!!!!         <<<<
+                                      \\\//
+                                     -(@ @)-
+        --------------------------oOO--(_)--OOo-----------------------------
+        #
+      state: present
