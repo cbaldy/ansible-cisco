@@ -5,4 +5,4 @@
    - name: show ip int bri
      cisco.ios.ios_command:
        commands:
-         - show ip interfaces brief
+         - show ip interface brief
