@@ -2,7 +2,7 @@
 - hosts: all
 
   tasks:
-   - name: show ip int
+   - name: show ver
      ios_command:
        commands:
-         - show ip int bri   
+         - show version  
