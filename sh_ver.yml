@@ -8,6 +8,6 @@
          - show version | incl Version
        register: output
 
-  - name: print output
-      debug:
-        var: output.stdout_lines
+   - name: print output
+     debug:
+       var: output.stdout_lines
