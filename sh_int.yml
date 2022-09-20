@@ -1,6 +1,6 @@
 ---
 - hosts: all
-
+  gather_facts: no
   tasks:
    - name: show ip int bri
      ios_command:
