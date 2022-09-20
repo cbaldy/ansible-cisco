@@ -3,6 +3,6 @@
   gather_facts: no
   tasks:
    - name: show ip int bri
-     ios_command:
+     cisco.ios.ios_command:
        commands:
          - show ip interfaces brief
