@@ -2,4 +2,4 @@
   hosts: all
   cisco.ios.ios_command:
     commands:
-    - show interfaces
+      - show interfaces
