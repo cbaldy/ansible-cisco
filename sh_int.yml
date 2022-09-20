@@ -4,10 +4,10 @@
   connection: local
 
   tasks:
-   - name: show run 
+   - name: show ip int
      ios_command:
        commands:
-         - show run   
+         - show ip int bri   
      register: config
 
    - name: save output to /etc/ansible/backups 
