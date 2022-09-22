@@ -9,6 +9,8 @@
     cisco.ios.ios_banner:
       banner: motd
       multiline_delimiter: #
-      text: -----DATEC LAB------
-        #
+      text: --------------------
+            -----DATEC LAB------
+            -----.Welcome.------
+            --------------------
       state: present
